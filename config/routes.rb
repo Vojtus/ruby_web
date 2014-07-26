@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :drinks
+
   get 'welcome/index'
   get 'welcome/about'
 

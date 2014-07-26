@@ -1,0 +1,54 @@
+<div class="home-featured">
+
+        <ul id="filter-buttons">
+          <li><a href="#" data-filter="*" class="selected">vše</a></li>
+          <li><a href="#" data-filter=".rum">rum</a></li>
+          <li><a href="#" data-filter=".print">vodka</a></li>
+          <li><a href="#" data-filter=".design">whisky</a></li>
+          <li><a href="#" data-filter=".photo">gin</a></li>
+          <li><a href="#" data-filter=".photo">tequila</a></li>
+          <li><a href="#" data-filter=".photo">ostatní</a></li>
+        </ul>
+
+
+       
+
+  <!-- Filter container -->
+  <div id="filter-container" class="cf">
+    <% @drinks.each do |drink| %>
+      
+        <figure class=<%= drink.category %>>
+          <%= link_to image_tag('dummies/featured/'+drink.obr1), drink, {class: "thumb", width: '300px'} %>
+          <figcaption>
+            <%= link_to drink do %>
+            <h3 class="heading"><%= drink.name %></h3>
+            <% end %>
+            <%= drink.text1 %>
+          </figcaption>
+        </figure>
+
+        <!--
+          <%= drink.name %>
+          <%= drink.category %>
+          <%= drink.obr1 %>
+                
+          <%= drink.text1 %>
+                 
+          <%= link_to 'Show', drink %>
+        -->
+
+        <!-- TODO auth only
+          <td><%= link_to 'Edit', edit_drink_path(drink) %></td>
+        -->
+        <!-- TODO auth only, maybe place in to edit page.
+          <td><%= link_to 'Destroy', drink, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        -->
+      
+    <% end %>
+  </div>
+</div>
+
+
+    <br>
+
+    <%= link_to 'New Drink', new_drink_path %>

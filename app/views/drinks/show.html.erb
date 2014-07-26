@@ -1,0 +1,110 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<!-- portfolio content-->
+    <div id="portfolio-content" class="cf">         
+        
+        
+        
+        
+        <!-- project pager 
+        <div class="project-pager cf">
+          <a class="previous-project" href="#">&#8592; Previous project</a>
+          <a class="next-project" href="#">Next project &#8594;</a>
+        </div>  -->
+        <!-- ENDS project pager -->
+          
+          
+          <!-- project box -->
+        <div id="project-box" class="cf">
+        
+        
+          
+        
+        
+          <!-- slider -->
+          <div class="project-slider">
+                <div class="flexslider">
+              <ul class="slides">
+                <li>
+                  <%= image_tag('dummies/slides/'+@drink.obr1) %>
+                </li>
+                <li>
+                  <%= image_tag('dummies/slides/'+@drink.obr2) %>
+                </li>
+                <li>
+                  <%= image_tag('dummies/slides/'+@drink.obr3) %>
+                </li>
+              </ul>
+            </div>
+          </div>
+              <!-- ENDS slider -->
+
+
+          <div class="info">
+                <p><strong>Autor </strong> <%=@drink.autor%></p>
+                <p><strong>Čas </strong> <%=@drink.time%></p>
+                <p><%= link_to 'IBA', @drink.iba %></p>
+              </div>
+              
+              <!-- entry-content -->
+              <div class="entry-content">
+              
+                <h2 class="heading"><%=@drink.name %></h2>
+                
+                <div class="multicolumn">
+                <p><%= @drink.text1 %></p>
+
+                <p><%= @drink.text2 %></p>
+                
+                <p><%= @drink.text3 %></p>
+                
+                <p><%= @drink.text4 %></p>
+                
+                <p><%= @drink.text5 %></p>                
+                
+                
+                </div>
+              </div>
+              <!-- ENDS entry content -->
+              
+            </div>
+          <!-- ENDS project box -->
+          
+          
+        <!-- related -->
+        <div class="related-projects">
+          <h4 class="related-heading">Related projects</h4>
+          <div class="related-list cf">
+            <figure>
+              <a href="#" class="thumb"><img src="img/dummies/slides/01.jpg" alt="Alt text" /></a>
+              <a href="single.html" class="heading">Pellentesque habitant morbi</a>
+            </figure>
+            
+            <figure>
+              <a href="#" class="thumb"><img src="img/dummies/slides/02.jpg" alt="Alt text" /></a>
+              <a href="single.html" class="heading">Pellentesque habitant morbi</a>
+            </figure>
+            
+            <figure> 
+              <a href="#" class="thumb"><img src="img/dummies/slides/03.jpg" alt="Alt text" /></a>
+              <a href="single.html" class="heading">Pellentesque habitant morbi</a>
+            </figure>
+            
+            <figure>
+              <a href="#" class="thumb"><img src="img/dummies/slides/04.jpg" alt="Alt text" /></a>
+              <a href="single.html" class="heading">Pellentesque habitant morbi</a>
+            </figure>
+            
+          </div>
+        </div>
+        <!-- ENDS related -->
+                  
+        
+        </div>
+        <!-- ENDS portfolio content-->
+      
+
+<%= link_to 'Edit', edit_drink_path(@drink) %> |
+<%= link_to 'Back', drinks_path %>

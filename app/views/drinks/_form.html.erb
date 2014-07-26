@@ -1,0 +1,69 @@
+<%= form_for(@drink) do |f| %>
+  <% if @drink.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@drink.errors.count, "error") %> prohibited this drink from being saved:</h2>
+
+      <ul>
+      <% @drink.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
+  </div>
+  <div class="field">
+    <%= f.label :obr1 %><br>
+    <%= f.text_field :obr1 %>
+  </div>
+  <div class="field">
+    <%= f.label :obr2 %><br>
+    <%= f.text_field :obr2 %>
+  </div>
+  <div class="field">
+    <%= f.label :obr3 %><br>
+    <%= f.text_field :obr3 %>
+  </div>
+  <div class="field">
+    <%= f.label :autor %><br>
+    <%= f.text_field :autor %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.text_field :time %>
+  </div>
+  <div class="field">
+    <%= f.label :iba %><br>
+    <%= f.text_field :iba %>
+  </div>
+  <div class="field">
+    <%= f.label :text1 %><br>
+    <%= f.text_area :text1 %>
+  </div>
+  <div class="field">
+    <%= f.label :text2 %><br>
+    <%= f.text_area :text2 %>
+  </div>
+  <div class="field">
+    <%= f.label :text3 %><br>
+    <%= f.text_area :text3 %>
+  </div>
+  <div class="field">
+    <%= f.label :text4 %><br>
+    <%= f.text_area :text4 %>
+  </div>
+  <div class="field">
+    <%= f.label :text5 %><br>
+    <%= f.text_area :text5 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
